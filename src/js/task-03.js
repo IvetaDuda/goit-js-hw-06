@@ -18,7 +18,7 @@ console.log(listEl);
 const imageEl = images
   .map(
     (image) =>
-      `<li class="item"><img src="${image.url}" alt="${image.alt} width="310" height="200"></li>`
+      `<li class="item"><img src="${image.url}" alt="${image.alt} width="310px" height="200"></li>`
   )
   .join(' ');
 listEl.insertAdjacentHTML('beforeend', imageEl);

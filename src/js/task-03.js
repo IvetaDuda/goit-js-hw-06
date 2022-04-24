@@ -14,7 +14,7 @@ const images = [
 ];
 
 const listEl = document.querySelector('.gallery');
-console.log(listEl);
+
 const imageEl = images
   .map(
     (image) =>

@@ -1,8 +1,10 @@
 const refs = {
-  input: document.querySelector('#name-input'),
-  span: document.querySelector('#name-output'),
+  inputEl: document.querySelector('#name-input'),
+  spanEl: document.querySelector('#name-output'),
 };
-refs.input.addEventListener('input', onInputChange);
+refs.inputEl.addEventListener('input', onInputChange);
 function onInputChange(event) {
-  refs.span.textContent = event.target.value ? event.target.value : 'Anonymous';
+  refs.spanEl.textContent = event.target.value
+    ? event.target.value
+    : 'Anonymous';
 }

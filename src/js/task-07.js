@@ -1,11 +1,11 @@
 'use string';
-const input = document.querySelector('#font-size-control');
-const span = document.querySelector('#text');
+const inputEl = document.querySelector('#font-size-control');
+const spanEl = document.querySelector('#text');
 
-input.addEventListener('input', onTextScroll);
+inputEl.addEventListener('input', onTextScroll);
 
-span.style.fontSize = input.value + 'px';
+spanEl.style.fontSize = inputEl.value + 'px';
 
 function onTextScroll(event) {
-  span.style.fontSize = event.currentTarget.value + 'px';
+  spanEl.style.fontSize = event.currentTarget.value + 'px';
 }

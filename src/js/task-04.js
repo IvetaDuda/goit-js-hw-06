@@ -1,22 +1,13 @@
-const counterValue = () => {
-  const btns = document.querySelectorAll('button');
-  // console.log(btns);
+const btnDecrement = document.querySelector('button[data-action="decrement"]');
+const btnIncrement = document.querySelector('button[data-action="increment"]');
+const value = document.querySelector('#value');
 
-  btns.forEach((btn) => {
-    btn.addEventListener('click', function () {
-      const action = this.dataset.action;
-      const spn = this.parentElement.querySelector('#value');
-      const values = +spn.value;
-      let newValue;
-
-      if (action === 'increment') {
-        newValue = values + 1;
-      } else {
-        newValue = values - 1 > 0 ? values - 1 : 0;
-      }
-
-      spn.value = newValue;
-    });
-  });
+let number = Number(value.textContent);
+const onBtnDecrement = () => {
+  value.textContent = number -= 1;
 };
-counterValue();
+const onBtnIncrement = () => {
+  value.textContent = number += 1;
+};
+btnDecrement.addEventListener('click', onBtnDecrement);
+btnIncrement.addEventListener('click', onBtnIncrement);
